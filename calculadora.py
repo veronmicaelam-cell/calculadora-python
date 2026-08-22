@@ -14,23 +14,24 @@ def dividir (a, b):
     return a / b
 
 # 2.Manejo de excepciones para entradas inválidas
-try:
-    num1 = float(input("Introduce el primer número: "))
-    num2 = float(input("Introduce el segundo número: ")) 
-    operacion = input("Introduce la operación (+, -, *, /): ")
+if __name__ == '__main__':
+    try:
+        num1 = float(input("Introduce el primer número: "))
+        num2 = float(input("Introduce el segundo número: ")) 
+        operacion = input("Introduce la operación (+, -, *, /): ")
 
-    if operacion == '+': resultado = num1 + num2 
-    elif operacion == '-': resultado = num1 - num2 
-    elif operacion == '*': resultado = num1 * num2
-    elif operacion == '/': resultado = num1 / num2 
-    else: resultado = "Operación inválida" 
+        if operacion == '+': resultado = num1 + num2 
+        elif operacion == '-': resultado = num1 - num2 
+        elif operacion == '*': resultado = num1 * num2
+        elif operacion == '/': resultado = num1 / num2 
+        else: resultado = "Operación inválida" 
 
-    print(f"El resultado es: {resultado}")
+        print(f"El resultado es: {resultado}")
 
-except ValueError: 
-    print("Error: Por favor, ingresa un número válido")
-except ZeroDivisionError as e:
-    print(f"Error: {e}")
+    except ValueError: 
+        print("Error: Por favor, ingresa un número válido")
+    except ZeroDivisionError as e:
+        print(f"Error: {e}")
 
 # def: Se definen sumar(), restar(), multiplicar() y dividir() de forma independiente. 
 
