@@ -1,5 +1,5 @@
 import pytest
-from ..calculadora import sumar, restar, multiplicar, dividir
+from calculadora import sumar, restar, multiplicar, dividir
 
 # ----- FIXTURES -----
 @pytest.fixture
